@@ -1,0 +1,100 @@
+body{
+    text-align: center;
+    background-color: #028668;
+    font-family: 'Rubik Bubbles', cursive;
+    font-weight: 400;
+    color: white;
+}
+.img1{
+    width: 250px;
+}
+h1{
+    font-family: 'Rubik Bubbles', cursive;
+    font-weight: 400;
+    color: white;
+}
+.img2{
+    position: absolute;
+    right: 56%;
+    width: 20px;
+}
+.p1{
+    display: inline-block;
+    background-size:contain ;
+    background-color: #EC7357;
+    border-radius: 9px;
+    height: 30px;
+    width: 150px;
+    padding-top: 10px;
+}
+.p2{
+    margin-top: 0px;
+    font-size: 13px;
+    display: inline-block;
+    background-size:contain ;
+    background-color: #EC7357;
+    border-radius: 9px;
+    height: 23px;
+    width: 90px;
+    padding-top: 9px;
+}
+h2{
+    display: inline-block;
+    margin-top: 50px;
+    width: 30%;
+    margin-bottom: 50px;
+}
+.img3{
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    background-image: url(img/Screenshot\ 2022-11-17\ at\ 11.59\ 1.png);
+    background-size: cover;
+    border-radius: 10px;
+}
+.img3:hover{
+    background: url('img/2mtE.gif');
+    background-size: 300px;
+}
+.wish{
+    position: relative;
+}
+.wish:nth-child(odd)::after{
+    position: absolute;
+    right: 300px;
+    top: 75px;
+    content: url('img/Union.svg');
+    animation: rotateODD 1s ease infinite;
+}
+.wish:nth-child(even)::after{
+    position: absolute;
+    left: 300px;
+    top: 75px;
+    transform: rotate(180deg);
+    content: url('img/Union.svg');
+    animation:  rotateEVEN 1s ease infinite;
+}
+
+@keyframes rotateODD{
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(10deg);
+      }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes rotateEVEN{
+    0% {
+        transform: scale(-1, 1) rotate(0deg);
+    }
+    50% {
+        transform: scale(-1, 1) rotate(10deg);
+      }
+    100%  {
+        transform: scale(-1, 1) rotate(0deg);
+    }
+}
